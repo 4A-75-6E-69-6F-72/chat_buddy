@@ -24,3 +24,9 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.simple-grain-effect {
+    background:
+        url('/texture/simple_noise.svg');
+    background-blend-mode: overlay;
+}
