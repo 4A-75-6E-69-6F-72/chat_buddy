@@ -8,7 +8,7 @@ Chatbuddy is a Next.js application powered by Mistral AI. Follow the steps below
 
 ### 1. Clone the repository
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/4A-75-6E-69-6F-72/chat_buddy.git
 cd chatbuddy
 ```
 
@@ -61,8 +61,3 @@ The project was built with the following dependencies:
 "tailwindcss": "^4",
 "typescript": "^5"
 ```
-
----
-
-## 📄 License
-This project is licensed under your chosen license (e.g., MIT).
