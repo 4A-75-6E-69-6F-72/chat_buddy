@@ -23,7 +23,7 @@ const ChatSection = () => {
     }, 500);
   };
 
-  const getNextMessage = async () => {
+  const loadNextMessage = async () => {
     if (isLoading) { return }
     setHasError(false)
     setIsLoading(true)
@@ -46,7 +46,7 @@ const ChatSection = () => {
           dateTime: new Date(),
           position: MessagePosition.LEFT
         }
-        const newMessages = [...messages, leftMessage]
+        const newMessages = [leftMessage]
         setMessages(newMessages)
       } else {
         const rightMessage: Message = {
@@ -63,8 +63,6 @@ const ChatSection = () => {
           messages: requestMessage,
         });
         const responseMessage = (chatResponse.choices[0].message.content as { text: string }[])[1].text;
-
-        // const responseMessage = "hey buddy"
         const leftMessage: Message = {
           content: String(responseMessage),
           dateTime: new Date(),
@@ -84,7 +82,7 @@ const ChatSection = () => {
   }
 
   useEffect(() => {
-    getNextMessage()
+    loadNextMessage()
   }, [])
 
   return <div className="w-full flex flex-col flex-grow items-center justify-center overflow-hidden">
@@ -97,7 +95,7 @@ const ChatSection = () => {
       </div>
     </div>
     <div className="md:w-[60%] overflow-visible">
-      <ChatTextField content={userText} onChange={setUserText} onSubmit={getNextMessage} />
+      <ChatTextField content={userText} onChange={setUserText} onSubmit={loadNextMessage} />
     </div>
   </div>
 }

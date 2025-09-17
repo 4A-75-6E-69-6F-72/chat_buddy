@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Chatbuddy
 
-## Getting Started
+Chatbuddy is a Next.js application powered by Mistral AI. Follow the steps below to set up and run the project.
 
-First, run the development server:
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+```bash
+git clone <your-repo-url>
+cd chatbuddy
+```
+
+### 2. Create a `.env` file
+At the root of the project, create a file named `.env` and add the following variable:
+
+```env
+NEXT_PUBLIC_MISTRAL_API_KEY=your_mistral_api_key_here
+```
+
+> 🔑 Replace `your_mistral_api_key_here` with a valid key generated from the [Mistral AI Console](https://console.mistral.ai/).
+
+### 3. Install dependencies
+Run the following command to install all required packages:
+
+```bash
+npm install
+```
+
+### 4. Start the development server
+Once installation is complete, start the app in development mode:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 5. Access the application
+Open your browser and navigate to:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+http://<your-ip-address>:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+You should now see **Chatbuddy** running locally 🎉
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Environment Specifications
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The project was built with the following dependencies:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```json
+"@eslint/eslintrc": "^3",
+"@tailwindcss/postcss": "^4",
+"@types/node": "^20",
+"@types/react": "^19",
+"@types/react-dom": "^19",
+"eslint": "^9",
+"eslint-config-next": "15.5.3",
+"tailwindcss": "^4",
+"typescript": "^5"
+```
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📄 License
+This project is licensed under your chosen license (e.g., MIT).
