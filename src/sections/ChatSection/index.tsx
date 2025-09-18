@@ -57,7 +57,13 @@ const ChatSection = () => {
         const newMessages1 = [...messages, rightMessage]
         setMessages(newMessages1)
         setUserText("")
-        requestMessage = [{ role: 'user', content: `${preprompt} ${messages.map((message) => { return `\n${message.content}\n` })} ${rightMessage.content}` }]
+        requestMessage = [{
+          role: 'user', content: `${preprompt} 
+          the first message was yours, the second is mine: 
+          ${messages.map((message) => {
+            return `\n${message.content}\n`
+          })} ${rightMessage.content}`
+        }]
         const chatResponse = await client.chat.complete({
           model: 'magistral-small-latest',
           messages: requestMessage,
